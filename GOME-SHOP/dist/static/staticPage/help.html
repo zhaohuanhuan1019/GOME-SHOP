@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="dns-prefetch" href="//css.gomein.net.cn">
+<link rel="dns-prefetch" href="//js.gomein.net.cn">
+<title>帮助</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="m.gome.com.cn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="applicable-device" content="mobile">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="wap-font-scale" content="no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Pragma" content="no-cache">
+<style type="text/css">
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    font-family: PingFangSC-Regular;
+    letter-spacing: 0;
+    background-color: #F3F5F7;
+  }
+  .help-con {
+    border-top: 1px solid #ddd;
+    background: #fff;
+    margin-top: .1rem;
+    padding: 0.15rem;
+    font-size: .13rem;
+    color: #333;
+  }
+  .help-con .help-title {
+    font-size: .16rem;
+    line-height: .22rem;
+    padding: .2rem 0;
+  }
+  .help-con p {
+    padding-bottom: .1rem;
+    line-height: .16rem;
+  }
+  .help-con img {
+    margin-bottom: .3rem;
+  }
+</style>
+<script>
+    (function(doc,win){
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function(){
+        var clientWidth = docEl.clientWidth;
+        if(!clientWidth) return;
+        var fsize=parseFloat(100*(clientWidth/375)).toFixed(2);
+        docEl.style.fontSize = fsize+'px';
+        var realF=parseFloat(window.getComputedStyle(document.getElementsByTagName("html")[0]).fontSize).toFixed(2);
+        if (realF!=fsize) {
+            docEl.style.fontSize=parseInt((fsize*fsize/realF))+'px';
+        }
+    };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+    recalc();
+})(document,window);
+</script>
+</head>
+<body>
+  <div class="help-con">
+  	<div class="help-title">帮助详情</div>
+  	<p>1、微信账号在哪里查看?打开微信，点击底部“我”</p>
+  	<img src="../img/help1.png" width="100%">
+  	<p>2、点击头像右边一栏的小三角箭头</p>
+      <img src="../img/help2.png" width="100%">
+      <p>3、在打开个人信息的手机界面上，长按微信账号复制</p>
+      <img src="../img/help3.png" width="100%">
+      <p>4、如果您微信号同手机号，可直接填写手机号</p>
+  </div>
+</body>
+</html>
